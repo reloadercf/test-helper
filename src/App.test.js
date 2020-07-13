@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import {traerimagenes} from './helpers'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test('test Function traer imagen', async() => {
+  let imagen=await traerimagenes()
+  expect(typeof(imagen)).toEqual("string")
+})
+
+
+
